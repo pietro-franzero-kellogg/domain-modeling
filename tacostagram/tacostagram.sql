@@ -3,6 +3,7 @@ DROP TABLE IF EXISTS posts;
 DROP TABLE IF EXISTS likes;
 DROP TABLE IF EXISTS comments;
 DROP TABLE IF EXISTS follows;
+DROP TABLE IF EXISTS feeds;
 
 
 -- CREATE TABLES
@@ -53,4 +54,11 @@ CREATE TABLE follows (
   is_active BOOLEAN,
   created_at DATETIME,
   updated_at DATETIME
+);
+
+CREATE TABLE feeds (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  user_id INTEGER,
+  post_id INTEGER,
+  created_at DATETIME
 );
